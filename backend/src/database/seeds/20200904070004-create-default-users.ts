@@ -7,7 +7,7 @@ module.exports = {
       [
         {
           name: "Administrador",
-          email: "admin@jucrik.app",
+          email: "typer@jucrik.app",
           passwordHash: "$2a$08$WaEmpmFDD/XkDqorkpQ42eUZozOqRCPkPcTkmHHMyuTGUOkI8dHsq",
           profile: "admin",
           tokenVersion: 0,

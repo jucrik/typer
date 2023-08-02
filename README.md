@@ -383,7 +383,7 @@ sudo certbot renew --dry-run
 
 ## Datos de acceso
 
-Usuario: admin@jucrik.app<br>
+Usuario: typer@jucrik.app<br>
 Contraseña: admin
 
 ## Actualizar
