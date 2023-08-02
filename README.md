@@ -88,6 +88,11 @@ Iniciar sesión con el nuevo usuario.
 su deploy
 ```
 
+Actualizar paquetes.
+```bash
+sudo apt -y update && sudo apt -y upgrade
+```
+
 Instalar Node18.x y librerías.
 ```bash
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
