@@ -395,6 +395,9 @@ Contraseña: admin
 
 Typer es una aplicación en constante desarrollo para mejorar el rendimiento. Para actualizarla y obtener las nuevas funciones ejecutar el comando dentro de la rama del proyecto.
 ```bash
+sudo deploy
+```
+```bash
 cd ~
 ```
 ```bash
@@ -407,6 +410,9 @@ sh update.sh
 ## Aumentar Usuarios y Conexiones
 
 Edita las líneas <code>USER_LIMIT</code> y <code>CONNECTIONS_LIMIT</code>. Para incrementar el número se debe considerar rendimiento del servidor donde está alojado el proyecto, de lo contrario correrá lento y con dificultades.
+```bash
+sudo deploy
+```
 ```bash
 cd ~
 ```

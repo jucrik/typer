@@ -8,13 +8,13 @@
 			"type": "image/x-icon"
 		},
 		{
-			"src": "/android-chrome-192x192.png",
-			"sizes": "192x192",
+			"src": "/android-chrome-500x500.png",
+			"sizes": "500x500",
 			"type": "image/png"
 		}
 	],
 	"start_url": ".",
 	"display": "standalone",
-	"theme_color": "#000000",
-	"background_color": "#ffffff"
+	"theme_color": "#0066cc",
+	"background_color": "#0066cc"
 }
