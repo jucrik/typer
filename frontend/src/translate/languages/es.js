@@ -311,7 +311,7 @@ const messages = {
           message: "Mensaje de",
         },
         tabs: {
-          open: { title: "Bandeja de entrada" },
+          open: { title: "Buzón" },
           closed: { title: "Resuelto" },
           search: { title: "Buscar" },
         },
