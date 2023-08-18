@@ -422,3 +422,118 @@ nano typer/backend/.env
 ```bash
 pm2 restart all
 ```
+
+## Corrección de errores 'Server internal error'
+
+Volver a otorgar permisos a root en mysql.
+```bash
+su root
+```
+```bash
+cd ~
+```
+```bash
+sudo mysql -u root
+```
+```bash
+USE mysql;
+```
+```bash
+UPDATE user SET plugin='mysql_native_password' WHERE User='root';
+```
+```bash
+FLUSH PRIVILEGES;
+```
+```bash
+exit;
+```
+```bash
+service mysql restart
+```
+```bash
+su deploy
+```
+```bash
+sudo apt -y install apt-transport-https ca-certificates curl software-properties-common git
+```
+
+La contraseña solicitada es del usuario deploy.
+```bash
+sudo usermod -aG mysql ${USER}
+```
+```bash
+su - ${USER}
+```
+```bash
+cd typer/backend
+```
+```bash
+npm install
+```
+```bash
+npm run build
+```
+```bash
+npx sequelize db:migrate
+```
+```bash
+npx sequelize db:seed:all
+```
+```bash
+cd ../frontend
+```
+
+En caso no poder iniciar sesión por el mensaje Server internal error. En la compilación del fronted corregir los archivos modificados <code>./src/layout/MainListItems.js</code> y <code>./src/pages/Login/index.js</code>. Y volverlos a subir.
+```bash
+npm run build
+```
+
+Eliminar todos los procesos y volverlos a crear.
+```bash
+pm2 kill
+```
+```bash
+cd typer/backend
+```
+```bash
+pm2 start dist/server.js --name typer-backend
+```
+```bash
+pm2 save
+```
+```bash
+pm2 startup ubuntu -u deploy
+```
+
+Copiar la última línea generada por el comando anterior y ejecutarlo. Será algo como esto:
+```bash
+sudo env PATH=$PATH:/usr/bin pm2 startup ubuntu -u deploy --hp /home/deploy
+```
+```bash
+pm2 list
+```
+```bash
+cd ../frontend
+```
+```bash
+pm2 start server.js --name typer-frontend
+```
+```bash
+pm2 save
+```
+```bash
+pm2 list
+```
+
+## Actualizar Whatsapp Web
+
+En caso de no generarse el QRCode se debe actualizar el script de whatsapp web. Para actualizarlo debe ser desde el backend.
+```bash
+cd typer/backend
+```
+```bash
+npm i whatsapp-web.js
+```
+```bash
+pm2 restart all
+```
