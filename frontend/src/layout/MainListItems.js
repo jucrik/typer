@@ -13,17 +13,17 @@ import {
 
 import {
   AccountTreeOutlined,
-  //Code,
+  Code,
   ContactPhoneOutlined,
   DashboardOutlined,
-  //DeveloperModeOutlined,
+  DeveloperModeOutlined,
   LocalOffer,
-  //MenuBook,
+  MenuBook,
   PeopleAltOutlined,
   QuestionAnswerOutlined,
   SettingsOutlined,
   SyncAlt,
-  //VpnKeyRounded,
+  VpnKeyRounded,
   WhatsApp
 } from "@material-ui/icons";
 
