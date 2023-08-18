@@ -13,17 +13,13 @@ import {
 
 import {
   AccountTreeOutlined,
-  Code,
   ContactPhoneOutlined,
   DashboardOutlined,
-  DeveloperModeOutlined,
   LocalOffer,
-  MenuBook,
   PeopleAltOutlined,
   QuestionAnswerOutlined,
   SettingsOutlined,
   SyncAlt,
-  VpnKeyRounded,
   WhatsApp
 } from "@material-ui/icons";
 
@@ -154,39 +150,9 @@ const MainListItems = (props) => {
               icon={<AccountTreeOutlined />}
             />
             <ListItemLink
-              to="/Integrations"
-              primary={i18n.t("mainDrawer.listItems.integrations")}
-              icon={<DeveloperModeOutlined />}
-            />
-            <ListItemLink
               to="/settings"
               primary={i18n.t("mainDrawer.listItems.settings")}
               icon={<SettingsOutlined />}
-            />
-            <Divider className={classes.divider} />
-            <ListSubheader inset className={classes.sub}>
-              {i18n.t("mainDrawer.listItems.apititle")}
-            </ListSubheader>
-            <ListItemLink
-              to="/api"
-              primary={i18n.t("mainDrawer.listItems.api")}
-              icon={
-                <Code />
-              }
-            />
-            <ListItemLink
-              to="/apidocs"
-              primary={i18n.t("mainDrawer.listItems.apidocs")}
-              icon={
-                <MenuBook />
-              }
-            />
-            <ListItemLink
-              to="/apikey"
-              primary={i18n.t("mainDrawer.listItems.apikey")}
-              icon={
-                <VpnKeyRounded />
-              }
             />
           </>
         )}
